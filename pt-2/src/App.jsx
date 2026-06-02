@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-// import {p5Canvas} from '@p5-wrapper/react'
+import {P5Canvas} from '@p5-wrapper/react'
 
 
 
@@ -15,9 +15,11 @@ function App() {
         </div>
         <div>
           <h1>Get</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
+          <P5Canvas
+              sketch={SketchX}
+              obj_input={{count}}
+              obj_output={callBack}
+          />
         </div>
         <button
           type="button"
